@@ -1,16 +1,30 @@
-function handleSubmit(event) {
+const handleSubmit = async (event) => {
     event.preventDefault()
-
-    // check what text was put into the form field
     let formText = document.getElementById('name').value
-    Client.checkForName(formText)
-
     console.log("::: Form Submitted :::")
-    fetch('http://localhost:8081/test')
-    .then(res => res.json())
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
-    })
+    const apiResponse = await fetch(
+        `http://localhost:8081/text?name=${formText}`,
+        {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        }
+    )
+    updateUI()
 }
-
+const updateUI = async () => {
+    const request = await fetch('/text');
+    try {
+        const allData = await request.json();
+        console.log(allData.length)
+        console.log(allData[0].agreement)
+        document.getElementById('results').innerHTML = allData[0].agreement
+    }
+    catch (error) {
+        console.log("error", error);
+    }
+}
 export { handleSubmit }
+

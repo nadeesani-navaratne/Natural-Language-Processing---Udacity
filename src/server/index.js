@@ -1,5 +1,6 @@
 const dotenv = require('dotenv');
 dotenv.config();
+const apiRequest = require('./apiRequest')
 
 var path = require('path')
 const express = require('express')
@@ -21,8 +22,28 @@ app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
 
+
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
+
+//Route data to an empty array where used to update in the UI
+const postData = [];
+
+app.post('/text', async (req, res) => {
+    const input = req.query.name;
+    console.log(input)
+    const response = await apiRequest.getRequest(input)
+    //res.send(mockAPIReconst data =  response.json();sponse)
+    const data = await response.json();
+    postData.push(data)
+    res.send(data)
+})
+
+
+app.get('/text', getData)
+function getData(req, res) {
+    res.send(postData);
+}
 
 console.log(`Your API key is ${process.env.API_KEY}`);
