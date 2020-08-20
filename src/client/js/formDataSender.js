@@ -1,4 +1,4 @@
-const sendFormData = async (inputText) => {
+const sendFormData = async () => {
     let formText = document.getElementById('name').value
     console.log("::: Form Submitted :::")
     const apiResponse = await fetch(`http://localhost:8081/text?name=${formText}`, {
