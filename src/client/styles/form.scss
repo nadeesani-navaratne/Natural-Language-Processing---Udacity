@@ -10,3 +10,30 @@ input {
     line-height: 16px;
     margin: 10px 0;
 }
+
+.hidden{
+    display: none; 
+
+}
+
+#result{
+    background-color: red;
+    border: 1px solid #545454;
+    border-radius: 3px;
+    padding: 40px;
+    display:flexbox;
+    justify-content: center;
+    align-content: space-around;
+}
+
+#submitted-id{
+    background-color: royalblue;
+}
+
+#input-id{
+    background-color: salmon;
+}
+
+#output-id{
+    background-color: yellow;
+}

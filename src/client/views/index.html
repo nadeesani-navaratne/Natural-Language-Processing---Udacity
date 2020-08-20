@@ -1,43 +1,91 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="/styles/resets.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/form.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+    <title>Natural Language Processing</title>
+</head>
 
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+<body>
 
-        <main>
+    <header>
+        <div class="">
+            <header>Natural Language Processing</header>
+        </div>
+        <div class="">
+            navigation
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <form action="" class="" onsubmit="return handleSubmit(event)">
+                <input id="name" type="text" name="input" value="" onblur="onBlur()"
+                    placeholder="Enter your text to determine">
+                <input type="submit" name="" value="ANALIZE" onclick="return Client.handleSubmit(event)"
+                    onsubmit="return handleSubmit(event)">
+            </form>
             <section>
-                <form action="" class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
-            <section>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
+                <section>
+                    <div id="results"></div>
+                    <div id="result" class="hidden">
+                        <div id="submitted-id">Submitted Text</div>
+                        <div id="input-id"></div>
+                        <div id="output-id">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Agreement
+                                        </td>
+                                        <td id="agreement-id"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Model
+                                        </td>
+                                        <td id="model-id"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Irony
+                                        </td>
+                                        <td id="irony-id"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Subjectivity
+                                        </td>
+                                        <td id="subject-id"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Confidence
+                                        </td>
+                                        <td id="confidence-id"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
-        <footer>
-            <p>This is a footer</p>
-        </footer>
+                    </div>
 
-    </body>
+                </section>
+    </main>
+
+    <footer>
+        <p>This is a footer</p>
+    </footer>
+
+</body>
+
 </html>
