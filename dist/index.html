@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/form.css">
     <link rel="stylesheet" href="/styles/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+    <title>Natural Language Processing</title>
 <link href="main.css" rel="stylesheet"></head>
 
 <body>
 
     <header>
         <div class="">
-            Logo
+            <header>Natural Language Processing</header>
         </div>
         <div class="">
             navigation
@@ -27,7 +29,7 @@
             <form action="" class="" onsubmit="return handleSubmit(event)">
                 <input id="name" type="text" name="input" value="" onblur="onBlur()"
                     placeholder="Enter your text to determine">
-                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
+                <input type="submit" name="" value="ANALIZE" onclick="return Client.handleSubmit(event)"
                     onsubmit="return handleSubmit(event)">
             </form>
             <section>
@@ -37,47 +39,51 @@
                     <div id="result" class="hidden">
                         <div id="submitted-id">Submitted Text</div>
                         <div id="input-id"></div>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        Agreement
-                                    </td>
-                                    <td id="agreement-id"></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Model
-                                    </td>
-                                    <td id="model-id"></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Irony
-                                    </td>
-                                    <td id="irony-id"></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Subjectivity
-                                    </td>
-                                    <td id="subject-id"></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Confidence
-                                    </td>
-                                    <td id="confidence-id"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div id="output-id">Results
+                            <table class="values">
+                                <tbody>
+                                    <tr>
+                                        <td class= "description">
+                                            Agreement
+                                        </td>
+                                        <td id="agreement-id"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class= "description">
+                                            Model
+                                        </td>
+                                        <td id="model-id"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class= "description">
+                                            Irony
+                                        </td>
+                                        <td id="irony-id"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class= "description">
+                                            Subjectivity
+                                        </td>
+                                        <td id="subject-id"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class= "description">
+                                            Confidence
+                                        </td>
+                                        <td id="confidence-id"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
                     </div>
 
                 </section>
     </main>
 
     <footer>
-        <p>This is a footer</p>
+        <p>Natural Language Processing</p>
     </footer>
 
 <script type="text/javascript" src="main.js"></script></body>

@@ -9,31 +9,67 @@ input {
     width: 100%;
     line-height: 16px;
     margin: 10px 0;
+    color: rgb(16, 31, 116);
 }
 
-.hidden{
-    display: none; 
-
+.hidden {
+    display: none;
 }
 
-#result{
-    background-color: red;
+#result {
+    background-color: rgb(250, 211, 217);
     border: 1px solid #545454;
     border-radius: 3px;
     padding: 40px;
-    display:flexbox;
+    display: flexbox;
     justify-content: center;
     align-content: space-around;
 }
 
-#submitted-id{
-    background-color: royalblue;
+#submitted-id {
+    background-color: rgb(252, 252, 200);
+    padding: 4px;
+    font-weight: bold;
+    font-size: 3vh;
 }
 
-#input-id{
-    background-color: salmon;
+#input-id {
+    padding: 4px;
+    margin-bottom: 1vh;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    background-color: rgb(252, 252, 200);
 }
 
-#output-id{
-    background-color: yellow;
+#output-id {
+    background-color: lightgoldenrodyellow;
+    font-style: italic;
+    font-weight: bold;
+    padding: 5px;
+    justify-content: center;
+}
+
+#agreement-id {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+#model-id {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+#irony-id {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+#subject-id {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+#confidence-id {
+    padding-top: 1vh;
 }

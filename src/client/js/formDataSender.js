@@ -18,6 +18,7 @@ const sendFormData = async () => {
     console.log(sentimentValue.sentence_list)
     console.log(sentimentValue.sentence_list[0].text)
     
+    document.getElementById('results').innerHTML = ""
     document.getElementById("result").classList.remove('hidden');
     //document.getElementById("result").classList.add('active');
 
