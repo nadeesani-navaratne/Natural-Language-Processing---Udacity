@@ -3,13 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Test</title>
-    <link rel="stylesheet" href="/styles/resets.css">
-    <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/header.css">
-    <link rel="stylesheet" href="/styles/form.css">
-    <link rel="stylesheet" href="/styles/footer.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
     <title>Natural Language Processing</title>
 <link href="main.css" rel="stylesheet"></head>
 
@@ -30,7 +23,7 @@
                 <input id="name" type="text" name="input" value="" onblur="onBlur()"
                     placeholder="Enter your text to determine">
                 <input type="submit" name="" value="ANALIZE" onclick="return Client.handleSubmit(event)"
-                    onsubmit="return handleSubmit(event)">
+                    onsubmit="return Client.handleSubmit(event)">
             </form>
             <section>
 
@@ -87,15 +80,18 @@
     </footer>
 
 
-<script>
-    // Check that service workers are supported
-    if ('serviceWorker' in navigator) {
-        // Use the window load event to keep the page load performant
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js');
-        });
-    }
-</script>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        } else {
+            console.log("Service Working not working");
+        }
+
+    </script>
 <script type="text/javascript" src="main.js"></script></body>
 
 </html>

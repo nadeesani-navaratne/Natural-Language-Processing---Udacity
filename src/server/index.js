@@ -12,6 +12,8 @@ app.use(cors());
 
 app.use(express.static('dist'))
 
+//app.use(express.static(__dirname + '/dist'));
+
 console.log(__dirname)
 
 app.get('/', function (req, res) {
