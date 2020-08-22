@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
     res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
-const port = process.env.port || 8081;
+const port = process.env.PORT || 8081;
 app.listen(port, function () {
     console.log(`Example app listening on port, ${port}`)
 })
