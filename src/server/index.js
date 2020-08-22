@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
 })
 
 const port = 8081
-app.listen(port, function () {
+app.listen(process.env.PORT || port, function () {
     console.log(`Example app listening on port, ${port}`)
 })
 
