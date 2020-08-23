@@ -10,9 +10,9 @@ const app = express()
 const cors = require('cors');
 app.use(cors());
 
-app.use(express.static('dist'))
+//app.use(express.static('dist'))
 
-//app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/dist'));
 
 console.log(__dirname)
 
