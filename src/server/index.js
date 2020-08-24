@@ -10,9 +10,9 @@ const app = express()
 const cors = require('cors');
 app.use(cors());
 
-//app.use(express.static('dist'))
+app.use(express.static('dist'))
 
-app.use(express.static(__dirname + 'dist'));
+//app.use(express.static(__dirname + 'dist'));
 
 console.log(__dirname)
 
@@ -21,7 +21,8 @@ app.get('/', function (req, res) {
     res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
-const PORT = process.env.PORT || 8081;
+//const PORT = process.env.PORT || 8081;
+PORT = 8081;
 app.listen(PORT, function () {
     console.log(`Example app listening on port, ${PORT}`)
 })
