@@ -2,7 +2,9 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-
+const loader = require('sass-loader')
+const urlLoader = require('url-loader')
+const WorkboxPlugin = require('workbox-webpack-plugin');
 module.exports = {
     mode: 'development',
     devtool: 'source-map',
@@ -22,6 +24,20 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+
+                            limit: 8192,
+                            name: '[name].[ext]',
+                            publicPath: 'images/'
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -38,6 +54,7 @@ module.exports = {
             // Automatically remove all unused webpack assets on rebuild
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
-        })
+        }),
+        new WorkboxPlugin.GenerateSW()
     ]
 }
